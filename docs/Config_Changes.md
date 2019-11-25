@@ -6,6 +6,12 @@ All dates in this document are approximate.
 
 # Changes
 
+20191124: The builtin T0, T1, T2, ... commands have been removed.  The
+extruder activate_gcode and deactivate_gcode config options have been
+removed.  If these commands (and scripts) are needed then define
+individual [gcode_macro T0] style macros that call the
+ACTIVATE_EXTRUDER command.
+
 20191121: The USB name has changed on lpc176x.  It now uses the unique
 chip id by default.  Update the "serial" setting in the "mcu" config
 section accordingly.

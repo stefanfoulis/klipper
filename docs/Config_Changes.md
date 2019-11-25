@@ -17,6 +17,10 @@ calls to SET_GCODE_OFFSET.  If support for M206 is needed, add a
 [gcode_macro M206] config section that calls SET_GCODE_OFFSET.  (For
 example "SET_GCODE_OFFSET Z=-{params.Z}".)
 
+20191124: Support for the undocumented "S" parameter of the "G4"
+command has been removed.  Replace any occurrences of S with the
+standard "P" parameter (the delay specified in milliseconds).
+
 20191121: The USB name has changed on lpc176x.  It now uses the unique
 chip id by default.  Update the "serial" setting in the "mcu" config
 section accordingly.

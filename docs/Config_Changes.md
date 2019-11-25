@@ -12,6 +12,11 @@ removed.  If these commands (and scripts) are needed then define
 individual [gcode_macro T0] style macros that call the
 ACTIVATE_EXTRUDER command.
 
+20191124: Support for the M206 command has been removed.  Replace with
+calls to SET_GCODE_OFFSET.  If support for M206 is needed, add a
+[gcode_macro M206] config section that calls SET_GCODE_OFFSET.  (For
+example "SET_GCODE_OFFSET Z=-{params.Z}".)
+
 20191121: The USB name has changed on lpc176x.  It now uses the unique
 chip id by default.  Update the "serial" setting in the "mcu" config
 section accordingly.
